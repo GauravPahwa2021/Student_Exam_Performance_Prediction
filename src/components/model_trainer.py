@@ -78,12 +78,12 @@ class ModelTrainer:
                     'learning_rate':[.1,.01,.05,.001],
                     'n_estimators': [8,16,32,64,128,256]
                 },
-                "CatBoost Regressor":{
+                "CatBoost":{
                     'depth': [6,8,10],
                     'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
                 },
-                "AdaBoost Regressor":{
+                "AdaBoost":{
                     'learning_rate':[.1,.01,0.5,.001],
                     'loss':['linear','square','exponential'],
                     'n_estimators': [8,16,32,64,128,256]
