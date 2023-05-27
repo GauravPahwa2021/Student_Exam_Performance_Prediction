@@ -5,6 +5,7 @@ seaborn
 scikit-learn
 catboost
 xgboost
-Flask
+flask
 dill
--e .
+ipykernel
+# -e .

@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request
+from flask_cors import CORS,cross_origin
 
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 from src.logger import logging
@@ -8,10 +9,12 @@ app = application
 
 # Route for a home page
 @app.route('/')
+@cross_origin()
 def index():
     return render_template('index.html')
 
-@app.route('/predictdata',methods = ['GET','POST'])
+@app.route('/predict',methods = ['GET','POST'])
+@cross_origin()
 def predict_datapoint():
     if request.method == 'GET':
         return render_template('home.html')
@@ -31,10 +34,12 @@ def predict_datapoint():
 
         logging.info("Before Pediction")
         predict_pipeline = PredictPipeline()
+
         logging.info("Mid Prediction")
         results = predict_pipeline.predict(predict_df)
+
         logging.info("After Prediction")
         return render_template('home.html',results=results[0])
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",debug=True)  
+    app.run(host="0.0.0.0",port=8000)  
