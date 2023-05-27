@@ -4,7 +4,7 @@ import sys
 from src.exception_handler import CustomException
 from src.logger import logging
 
-import pickle
+import dill
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 
@@ -13,8 +13,8 @@ def save_object(file_path,obj):
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path,exist_ok=True)
 
-        with open(file_path,"wb") as file_obj:
-            pickle.dump(obj,file_obj)
+        with open(file_path,'wb') as file_obj:
+            dill.dump(obj,file_obj)
 
     except Exception as e:
         raise CustomException(e,sys)
@@ -42,11 +42,13 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
 
         return report
     except Exception as e:
+        logging.info('Exception occured during model training')
         raise CustomException(e,sys)
     
-def load_object(filepath):
+def load_object(file_path):
     try:
-        with open(filepath,"rb") as file_obj:
-            pickle.load(file_obj)
+        with open(file_path,'rb') as file_obj:
+            dill.load(file_obj)
     except Exception as e:
+        logging.info('Exception Occured in load_object function utils')
         raise CustomException(e,sys)
