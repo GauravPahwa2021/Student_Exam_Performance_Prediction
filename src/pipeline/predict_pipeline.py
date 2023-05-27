@@ -14,7 +14,7 @@ class PredictPipeline:
     def predict(self,features):
         try:
             model_path = os.path.join('artifacts',"model.pkl")
-            preprocessor_path = os.path.join('artifacts',"preprocessor,pkl")
+            preprocessor_path = os.path.join('artifacts',"preprocessor.pkl")
 
             logging.info("Before Loading")
             model = load_object(filepath=model_path)
@@ -23,8 +23,7 @@ class PredictPipeline:
             logging.info("After Loading")
             data_scaled = preprocessor.transform(features)
             prediction = model.predict(data_scaled)
-            return prediction
-        
+            return prediction 
         except Exception as e:
             raise CustomException(e,sys)
 
