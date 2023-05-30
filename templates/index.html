@@ -2,16 +2,15 @@
 <html>
     <head>
         <title>Student Exam Performance Indicator Prediction Project</title>
-        <link rel="stylesheet" href="{{ url_for('templates', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <div class="login">
             <a href="https://github.com/GauravPahwa2021/Generic_ML_Project" class="top-left-link" target="_blank">GitHub Repository Link</a>
-            <h1>Student Performance Prediction - Gaurav Pahwa</h1>
-            <img src="{{ url_for('templates', filename='/your_profile_pic.jpg') }}" alt="Your Profile Picture" class="profile">
+            <h1>Student Exam Performance Prediction - Gaurav Pahwa</h1>
+            <img src="{{ url_for('static', filename='/Image/your_profile_pic.jpg') }}" alt="Your Profile Picture" class="profile">
             <div class="form-box">
             <form action="{{ url_for('predict_datapoint') }}" method="POST">
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Gender</label>
                     <select class="form-control" name="gender" placeholder="Enter you Gender" required>
                         <option class="placeholder" selected disabled value="">Select your Gender</option>
@@ -23,7 +22,7 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Race or Ethnicity</label>
                     <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
                         <option class="placeholder" selected disabled value="">Select Ethnicity</option>
@@ -44,7 +43,7 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Parental Level of Education</label>
                     <select class="form-control" name="parental_level_of_education"
                         placeholder="Enter you Parent Education" required>
@@ -69,7 +68,7 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Lunch Type</label>
                     <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
                         <option class="placeholder" selected disabled value="">Select Lunch Type</option>
@@ -81,7 +80,7 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Test preparation Course</label>
                     <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
                         required>
@@ -94,24 +93,20 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Writing Score out of 100</label>
                     <input class="form-control" type="number" name="reading_score"
                         placeholder="Enter your Reading score" min='0' max='100' />
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Reading Score out of 100</label>
                     <input class="form-control" type="number" name="writing_score"
                         placeholder="Enter your Reading Score" min='0' max='100' />
                 </div>
-                <div class="mb-3">
-                    <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
-                </div>
                 <div style="clear:both;"></div>
-                    <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
             </form>
             </div>
-        </div>
         <h2>
             Predicted Math Score is : {{ results }}
         </h2>
