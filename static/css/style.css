@@ -1,8 +1,8 @@
-body {
+body{
     font-family: Arial, sans-serif;
     background-color: #f6f1f1;
-  }
-.top-left-link {
+}
+.top-left-link{
         position: absolute;
         top: 20px; /* Add some top margin */
         left: 20px; /* Add some left margin */
@@ -13,63 +13,61 @@ body {
         color: black; /* Change the font color */
         text-decoration: none; /* Remove the underline */
         font-weight: bold;
-  }
-.profile
-  {
+}
+.profile{
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 10%;
         padding: 20px; /* adds 30 pixels of padding around the image */        
-  }
-  .form-box {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #c2b9b9;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  h1 {
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  input[type="number"], select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    display: block;
-    margin: 0 auto;
-  }
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  .form-group {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-    width: 30%;
-  }
-  
-  .form-group label {
-    margin-bottom: 5px;
-  }
+}
+.form-box{
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #c2b9b9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+label{
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+input[type="number"], select{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+}
+input[type="submit"]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  margin: 0 auto;
+}
+input[type="submit"]:hover{
+  background-color: #45a049;
+}
+.form-group{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  width: 30%;
+}
+.form-group label{
+  margin-bottom: 5px;
+}
