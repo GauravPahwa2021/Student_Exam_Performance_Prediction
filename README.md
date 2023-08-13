@@ -21,10 +21,6 @@ Target variable:
 Dataset Source Link :
 [https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?resource=download](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?resource=download)
 
-# Animation of UI
-
-![HomepageUI](./screenshots/stdperformanceindicator.gif)
-
 # Project Development Approach
 
 1. Data Ingestion :
