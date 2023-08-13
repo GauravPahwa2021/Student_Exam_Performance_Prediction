@@ -65,4 +65,4 @@ Link : [Model Training Notebook](./notebook/MODEL_TRAINING.ipynb)
 2. conda activate std/
 3. pip install -r requirements.txt
 4. Execute app.py
-5. Access http://127.0.0.1:5000/
+5. Access https://studentperformaceindicator.azurewebsites.net/
