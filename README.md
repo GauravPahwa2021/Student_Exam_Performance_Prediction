@@ -53,11 +53,11 @@ Dataset Source Link :
 
 # Exploratory Data Analysis Notebook
 
-Link : [EDA Notebook](./notebook/EDA STUDENT PERFORMANCE.ipynb)
+Link : [EDA Notebook](./notebook/EDA_STUDENT_PERFORMANCE.ipynb)
 
 # Model Training Approach Notebook
 
-Link : [Model Training Notebook](./notebook/MODEL TRAINING.ipynb)
+Link : [Model Training Notebook](./notebook/MODEL_TRAINING.ipynb)
 
 # Usage:
 
