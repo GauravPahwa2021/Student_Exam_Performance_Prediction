@@ -9,4 +9,5 @@ flask
 flask_cors
 dill
 ipykernel
+werkzeug==2.0.3
 # -e .
